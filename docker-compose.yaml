@@ -58,7 +58,7 @@ services:
       - cart
   payment:
     build: ./payment
-    image: maxdevopstech/python:4.0.0
+    image: maxdevopstech/payment:4.0.0
     container_name: payment
     environment:
       CART_HOST: cart
