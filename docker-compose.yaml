@@ -26,15 +26,15 @@ services:
       - payment
   user:
     build: ./user
-    image: maxdevopstech/user:4.0.0
+    image: joindevops/user:4.0.0
     container_name: user
     environment:
-        MONGO: true
-        REDIS_URL: "redis://redis:6379"
-        MONGO_URL=: "mongodb://mongodb:27017/users"
+      MONGO: true
+      REDIS_URL: 'redis://redis:6379'
+      MONGO_URL: "mongodb://mongodb:27017/users"
     depends_on:
-      - redis
-      - mongodb
+    - redis
+    - mongodb
   cart:
     build: ./cart
     image: maxdevopstech/cart:4.0.0
