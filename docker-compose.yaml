@@ -73,7 +73,7 @@ services:
       - user
       - rabbitmq
   rabbitmq:
-    image: rabbitmq:3
+    image: maxdevopstech/rabbitmq:4.0.0
     container_name: rabbitmq
     environment:
       RABBITMQ_DEFAULT_USER: roboshop
@@ -81,7 +81,7 @@ services:
     volumes:
       - rabbitmq:/var/lib/rabbitmq
   redis:
-    image: redis:7
+    image: maxdevopstech/redis:4.0.0
     container_name: redis
     volumes:
       - redis:/data
